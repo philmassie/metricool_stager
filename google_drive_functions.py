@@ -39,11 +39,12 @@ def find_file(fname, service):
     try:
         # create drive api client
         page_token=None
-        response = service.files().list(q=f"name = '{fname}'",
-                                        spaces='drive',
-                                        fields='nextPageToken, '
-                                                'files(id, name)',
-                                        pageToken=page_token).execute()
+        response = service.files().list(
+            q=f"name = '{fname}'",
+            spaces='drive',
+            fields='nextPageToken, '
+            'files(id, name)',
+            pageToken=page_token).execute()
         if len(response.get('files', [])) > 0:
             return(response.get('files', []))
         else:

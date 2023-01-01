@@ -12,3 +12,5 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit D:\My` Folders
 # Start in:
 "D:\My Folders\path\to\your\app"
 ```
+
+- google drive auth https://developers.google.com/drive/api/quickstart/python
